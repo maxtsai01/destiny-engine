@@ -1,148 +1,192 @@
 # 🔮 Destiny Engine — 命理 AI 引擎
 
-> **One input, multiple divination systems, AI-powered cross-system interpretation.**
->
-> 一個輸入，多個命理系統，AI 跨系統交叉解讀。
+<p align="center">
+  <strong>一個輸入，多個命理系統，AI 幫你讀懂自己</strong><br>
+  <em>One input. Multiple divination systems. AI-powered self-discovery.</em>
+</p>
 
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
+<p align="center">
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-why-this-exists">Why</a> •
+  <a href="#-systems">Systems</a> •
+  <a href="#-how-it-works">How It Works</a> •
+  <a href="#-contributing">Contributing</a>
+</p>
 
-## 🌟 What is this?
+---
 
-Destiny Engine is the **first open-source project** that integrates multiple Chinese and Western divination systems into a unified framework, powered by AI cross-system interpretation.
+## ✨ Highlights
 
-**The problem:** Existing fortune-telling tools are siloed — you go to one site for Zi Wei Dou Shu, another for BaZi, yet another for astrology. No one combines them.
+🎯 **世界第一個** 多命理系統 × AI 交叉解讀的開源引擎
 
-**Our solution:** One birth input → multiple systems calculate simultaneously → AI finds agreements, tensions, and unique insights across systems → actionable growth advice.
+🔄 **三系統同時排盤** — 八字 + 紫微斗數 + 西洋占星，一次搞定
 
-## 🎯 Core Philosophy
+🧠 **AI 交叉驗證** — 不是單系統猜測，是多系統共識。共鳴度算法量化可信度
 
-- **Not fortune-telling, but self-discovery** — Know your "factory settings" and play your cards right
-- **Resonance > Accuracy** — Users should feel "That's exactly me!" 
-- **Growth-oriented** — Every reading ends with "Here's what you can do next"
-- **Cross-validation** — Multiple systems pointing the same direction = high confidence
+💡 **不算命，幫成長** — 每次解讀都以「你可以做什麼」收尾，不是「你命中注定」
 
-## 📦 Systems (22 Modules)
+🏗️ **統一 Schema** — 業界首創，所有命理系統輸出同一格式，開發者可自由組合
 
-### Divination Systems (13)
-
-| System | Input | Status |
-|--------|-------|--------|
-| **八字 BaZi (Four Pillars)** | Birth date/time | 🔨 In Progress |
-| **紫微斗數 Zi Wei Dou Shu** | Birth date/time + gender | ✅ Working |
-| **西洋占星 Western Astrology** | Birth date/time + location | 🔨 In Progress |
-| **姓名學 Chinese Nameology** | Full name | 📋 Planned |
-| **數字易經 Number I-Ching** | Phone/plate number | 📋 Planned |
-| **易經 I-Ching** | Divination method | 📋 Planned |
-| **奇門遁甲 Qi Men Dun Jia** | Time + direction | 📋 Planned |
-| **六爻 Liu Yao** | Coin toss | 📋 Planned |
-| **擇日 Date Selection** | Event + candidates | 📋 Planned |
-| **風水 Feng Shui** | Direction/space | 📋 Planned |
-| **人類圖 Human Design** | Birth date/time + location | 📋 Planned |
-| **塔羅 Tarot** | Card draw | 📋 Planned |
-| **生命靈數 Life Path Number** | Birth date | 📋 Planned |
-
-### Infrastructure (4)
-- ✅ **Chinese Calendar Engine** — Solar↔Lunar, 24 Solar Terms
-- ✅ **Heavenly Stems & Earthly Branches** — 60 Jiazi cycle
-- ✅ **Wu Xing (Five Elements)** — Generation & overcoming cycles
-- 📋 **Ephemeris** — Planetary positions (for Western astrology)
-
-### AI Layer (5)
-- 🔨 **Cross-validation Engine** — Find agreements across systems
-- 🔨 **Resonance Algorithm** — Quantify cross-system confidence
-- 📋 **Personalized Interpretation** — Context-aware AI readings
-- 📋 **Growth Path Generator** — Actionable advice + timeline
-- 📋 **Feedback Learning** — User feedback improves interpretation
+---
 
 ## 🚀 Quick Start
 
 ```bash
-# Clone
 git clone https://github.com/maxtsai01/destiny-engine.git
 cd destiny-engine
-
-# Install
 npm install
-
-# Run demo
 npx ts-node src/demo.ts
 ```
 
-## 🏗️ Architecture
+**30 秒就能看到：** 八字排盤 + 紫微命盤 + 星座分析 + AI 交叉驗證報告 🔮
+
+---
+
+## 🤔 Why This Exists
+
+市面上的命理工具有三個問題：
+
+| 問題 | 現狀 | Destiny Engine |
+|------|------|----------------|
+| **各自為政** | 紫微一個 App、八字一個網站、星座又另一個 | 一個輸入 → 所有系統同時跑 |
+| **只給結果不給建議** | 「你是殺破狼格局」...然後呢？ | 每次都以成長建議收尾 |
+| **單系統容易偏頗** | 只看八字可能誤判 | 多系統交叉驗證，共鳴度越高越可信 |
+
+**核心理念：**
+
+> 命理不是宿命論，是自我認知的工具。
+> 用戶不是來「被算」的，是來「被懂」的。
+
+---
+
+## 📦 Systems
+
+### ✅ 已完成（v0.1.0）
+
+| 系統 | 類型 | 輸入 | 亮點 |
+|------|------|------|------|
+| **八字四柱** | 中國傳統 | 出生年月日時 | 日主、五行平衡、用神、大運流年 |
+| **紫微斗數** | 中國傳統 | 出生年月日時+性別 | 12 宮排盤、主星、四化飛星 |
+| **西洋占星** | 西洋 | 出生年月日時 | 太陽星座、上升星座、月亮星座 |
+| **交叉驗證引擎** | AI | 多系統結果 | 共鳴度分數、一致結論、內在張力分析 |
+
+### 📋 開發中（Phase 2-3）
+
+| 系統 | 狀態 | 預計時間 |
+|------|------|----------|
+| 姓名學（五格） | 📋 Phase 2 | Week 3-4 |
+| 數字易經 | 📋 Phase 2 | Week 3-4 |
+| 易經六十四卦 | 📋 Phase 2 | Week 3-4 |
+| 生命靈數 | 📋 Phase 2 | Week 3-4 |
+| 奇門遁甲 | 📋 Phase 3 | Week 5-6 |
+| 六爻占卜 | 📋 Phase 3 | Week 5-6 |
+| 擇日學 | 📋 Phase 3 | Week 5-6 |
+| 風水 | 📋 Phase 3 | Week 5-6 |
+| 人類圖 | 📋 Phase 3 | Week 5-6 |
+| 塔羅牌 | 📋 Phase 3 | Week 5-6 |
+
+**目標：22 個模組，涵蓋中西方命理 + 現代人格系統 + AI 整合**
+
+---
+
+## ⚙️ How It Works
 
 ```
-User Input: Name + Birth DateTime + Gender
-         ↓
-┌─────────────────────────────────┐
-│       Destiny Engine            │
-├────────┬────────┬───────┬───────┤
-│  BaZi  │ ZiWei  │ Astro │ More  │
-│  八字   │ 紫微    │ 占星   │  ...  │
-├────────┴────────┴───────┴───────┤
-│     Unified Output Schema       │
-├─────────────────────────────────┤
-│   AI Cross-System Interpretation │
-│   (Agreements · Tensions · Advice)│
-└─────────────────────────────────┘
-         ↓
-   Personalized Report
-   ├── Talent Radar Chart
-   ├── Blind Spot Alerts  
-   ├── Current Fortune
-   ├── System Resonance Score
-   └── Growth Advice (Top 3)
+使用者輸入：姓名 + 出生年月日時 + 性別
+                    ↓
+    ┌───────────────────────────────┐
+    │       Destiny Engine          │
+    ├─────────┬─────────┬───────────┤
+    │  八字    │  紫微    │  占星     │
+    │ BaZi    │ ZiWei   │ Astro    │
+    ├─────────┴─────────┴───────────┤
+    │     統一輸出格式 Schema         │
+    ├───────────────────────────────┤
+    │   🧠 AI 交叉驗證引擎            │
+    │  共鳴分析 · 張力偵測 · 建議生成   │
+    └───────────────────────────────┘
+                    ↓
+            個人化成長報告
+    ├── 🎯 天賦雷達圖（你強在哪）
+    ├── ⚠️ 盲區提醒（小心什麼）
+    ├── 📊 系統共鳴度（多少系統同意）
+    ├── 🔄 內在張力（矛盾 = 你的複雜性）
+    └── 💡 成長建議 Top 3（具體行動）
 ```
 
-## 📐 Unified Output Schema
+### 交叉驗證的威力
 
-Every system outputs the same standardized format for cross-validation:
+傳統：八字說你適合創業 → 你信嗎？也許信也許不信
+
+**Destiny Engine：**
+- 八字說你適合創業 ✅
+- 紫微也指向獨立事業 ✅
+- 星座確認你有領導特質 ✅
+- **共鳴度 85/100** → 三個系統都指向同一方向，可信度拉滿
+
+如果有矛盾呢？
+- 紫微說穩定工作好，八字說適合創業
+- **不是錯誤，是內在張力** → 「你骨子裡想闖，但環境讓你傾向安穩」
+- 這種解讀比單系統更貼近真實的你
+
+---
+
+## 📐 Unified Schema
+
+所有系統輸出同一格式，讓交叉驗證成為可能：
 
 ```typescript
 interface SystemOutput {
   system: SystemType;
-  strengths: Trait[];      // Natural talents
-  risks: Trait[];          // Blind spots
+  strengths: Trait[];        // 天賦強項
+  risks: Trait[];            // 盲區風險
   personality: PersonalityTrait[];
   suitableDirections: Direction[];
-  timeline: TimelineEntry[];
+  timeline: TimelineEntry[]; // 運勢時間軸
   currentFortune: Fortune;
   elementBalance?: ElementBalance;
 }
 ```
 
-See [`schema/unified-output.ts`](schema/unified-output.ts) for the full specification.
-
-## 💰 Business Model
-
-| Tier | Price | Content |
-|------|-------|---------|
-| Basic | Free | Single-system chart |
-| Full Report | NT$299 | Multi-system cross-analysis + AI |
-| Monthly | NT$99/mo | Monthly fortune updates |
-| Compatibility | NT$499 | Two-person analysis |
-| Enterprise | NT$2,999/mo | Team analysis + HR + API |
-
-## 🤝 Contributing
-
-We welcome contributions! Especially:
-- New divination system implementations
-- Improved interpretation prompts
-- Translations (currently zh-TW + en)
-- Bug fixes and tests
-
-## 📝 License
-
-MIT — Use it freely. Build amazing things.
-
-## 🙏 Credits
-
-- [iztro](https://github.com/SylarLong/iztro) — Zi Wei Dou Shu engine
-- [lunar-javascript](https://github.com/6tail/lunar-javascript) — Chinese calendar
-- [astronomy-engine](https://github.com/cosinekitty/astronomy) — Planetary calculations
+完整 Schema → [`schema/unified-output.ts`](schema/unified-output.ts)
 
 ---
 
-**Built with 🔮 by [CTMaxs](https://ctmaxs.com) — Allison, Max & Emily**
+## 💰 商業應用
 
-*「命理 GPS — 不只告訴你在哪，還告訴你怎麼走」*
+| 場景 | 說明 |
+|------|------|
+| **個人成長** | 輸入生辰 → 完整報告 → 知道自己的天賦和盲區 |
+| **命理師工具** | 一鍵排多系統盤，AI 輔助解讀，效率 10x |
+| **企業 HR** | 人才適配、團隊配置、領導力評估 |
+| **LINE Bot / Web App** | 免費基礎盤 → 付費完整報告 → 月訂閱運勢更新 |
+| **內容變現** | AI 自動生成每日/每週運勢 → 導流到付費報告 |
+
+---
+
+## 🤝 Contributing
+
+歡迎貢獻！特別需要：
+- 🔮 新的命理系統實作（姓名學、易經、奇門遁甲...）
+- 🧠 AI 解讀 Prompt 優化
+- 🌍 多語言翻譯（目前 zh-TW + en）
+- 🧪 測試案例和 Bug 修復
+
+---
+
+## 📝 License
+
+MIT — 自由使用，打造更好的東西。
+
+## 🙏 Credits
+
+- [iztro](https://github.com/SylarLong/iztro) — 紫微斗數排盤引擎
+- [lunar-javascript](https://github.com/6tail/lunar-javascript) — 農曆萬年曆
+- [astronomy-engine](https://github.com/cosinekitty/astronomy) — 天文計算
+
+---
+
+<p align="center">
+  <strong>Built with 🔮 by <a href="https://ctmaxs.com">CTMaxs</a></strong><br>
+  <em>命理 GPS — 不只告訴你在哪，還告訴你怎麼走</em>
+</p>
