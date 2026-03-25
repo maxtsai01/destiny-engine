@@ -3,7 +3,7 @@
  * 分析多系統結果的共鳴度、一致性和矛盾
  */
 
-import type { SystemAnalysis, CrossValidation, Trait, LifeDimension, SystemType } from '../core/types.js';
+import type { SystemAnalysis, CrossValidation, Trait, LifeDimension, SystemType } from '../core/types';
 
 // 每個系統在不同維度的權重
 const SYSTEM_WEIGHTS: Record<SystemType, Partial<Record<LifeDimension, number>>> = {

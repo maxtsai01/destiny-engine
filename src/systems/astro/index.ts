@@ -3,7 +3,7 @@
  * 基於出生日期計算太陽星座、月亮星座估算、上升星座估算
  */
 
-import type { BirthInfo, SystemAnalysis, Trait, LifeDimension } from '../../core/types.js';
+import type { BirthInfo, SystemAnalysis, Trait, LifeDimension } from '../../core/types';
 
 // ====== 12 星座 ======
 

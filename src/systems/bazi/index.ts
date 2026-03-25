@@ -3,9 +3,9 @@
  * 基於 lunar-javascript 計算四柱八字
  */
 
-import type { BirthInfo, SystemAnalysis, Trait, LifeDimension } from '../../core/types.js';
-import { TIAN_GAN_WUXING, DI_ZHI_WUXING, WUXING_CN, getWuXingRelation, getNaYin, DI_ZHI_CANG_GAN, hourToDiZhi } from '../../core/wuxing.js';
-import type { WuXing, TianGan, DiZhi } from '../../core/wuxing.js';
+import type { BirthInfo, SystemAnalysis, Trait, LifeDimension } from '../../core/types';
+import { TIAN_GAN_WUXING, DI_ZHI_WUXING, WUXING_CN, getWuXingRelation, getNaYin, DI_ZHI_CANG_GAN, hourToDiZhi } from '../../core/wuxing';
+import type { WuXing, TianGan, DiZhi } from '../../core/wuxing';
 
 // @ts-ignore
 import { Solar } from 'lunar-javascript';

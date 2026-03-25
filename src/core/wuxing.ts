@@ -2,7 +2,7 @@
  * 五行系統 — 所有中國命理的共用基礎
  */
 
-import type { WuXing, YinYang } from './types.js';
+import type { WuXing, YinYang } from './types';
 
 // ====== 天干 ======
 

@@ -1,2 +1,2 @@
-export * from './types.js';
-export * from './wuxing.js';
+export * from './types';
+export * from './wuxing';

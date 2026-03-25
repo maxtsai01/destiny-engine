@@ -3,7 +3,7 @@
  * 基於 iztro 開源庫
  */
 
-import type { BirthInfo, SystemAnalysis, Trait, LifeDimension } from '../../core/types.js';
+import type { BirthInfo, SystemAnalysis, Trait, LifeDimension } from '../../core/types';
 // @ts-ignore
 import { astro } from 'iztro';
 

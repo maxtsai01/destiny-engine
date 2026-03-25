@@ -4,12 +4,12 @@
  * 輸入生辰 → 三系統同時排盤 → 交叉驗證 → 整合報告
  */
 
-import { WUXING_CN, type WuXing } from './core/index.js';
-import { calculateBazi, baziToSystemAnalysis } from './systems/bazi/index.js';
-import { calculateZiwei, ziweiToSystemAnalysis } from './systems/ziwei/index.js';
-import { calculateAstro, astroToSystemAnalysis } from './systems/astro/index.js';
-import { crossValidate } from './ai/cross-validation.js';
-import type { BirthInfo } from './core/types.js';
+import { WUXING_CN, type WuXing } from './core/index';
+import { calculateBazi, baziToSystemAnalysis } from './systems/bazi/index';
+import { calculateZiwei, ziweiToSystemAnalysis } from './systems/ziwei/index';
+import { calculateAstro, astroToSystemAnalysis } from './systems/astro/index';
+import { crossValidate } from './ai/cross-validation';
+import type { BirthInfo } from './core/types';
 
 // ====== 測試用例 ======
 const testInput: BirthInfo = {
@@ -172,12 +172,56 @@ try {
     console.log(`    ${label} ${bar} ${avgScore}`);
   });
   
+  // ====== 第四部分：AI 解讀報告 ======
+  console.log('\n\n' + '─'.repeat(60));
+  console.log('📖 第四部分：造命 AI 離線解讀報告');
+  console.log('─'.repeat(60));
+
+  const { generateOfflineInterpretation, generateGrowthAdvice, generateInterpretationPrompt, getSystemPrompt } = require('./ai/interpreter');
+  
+  // 生成成長建議
+  const growthAdvice = generateGrowthAdvice(
+    [baziAnalysis, ziweiAnalysis, astroAnalysis],
+    cv
+  );
+  
+  // 組裝完整報告
+  const fullReport = {
+    id: 'demo-001',
+    generatedAt: new Date().toISOString(),
+    input: testInput,
+    systems: [baziAnalysis, ziweiAnalysis, astroAnalysis],
+    crossValidation: cv,
+    growthAdvice,
+    aiInterpretation: '',
+    talentRadar: dimensions.map((dim: string) => {
+      const allTraits = [...baziAnalysis.traits, ...ziweiAnalysis.traits, ...astroAnalysis.traits]
+        .filter((t: any) => t.dimension === dim);
+      const avgScore = allTraits.length > 0
+        ? Math.round(allTraits.reduce((sum: number, t: any) => sum + (t.type === 'strength' ? t.score : 100 - t.score), 0) / allTraits.length)
+        : 50;
+      return { dimension: dim, score: avgScore, label: dimCN[dim] };
+    }),
+  };
+  
+  // 生成離線報告
+  const report = generateOfflineInterpretation(fullReport);
+  console.log('\n' + report);
+  
+  // 生成 AI 解讀用的 prompt（展示用）
+  console.log('\n\n' + '─'.repeat(60));
+  console.log('🧠 AI 解讀 Prompt（接 LLM 時使用）');
+  console.log('─'.repeat(60));
+  console.log('\n[System Prompt 長度]:', getSystemPrompt().length, '字');
+  console.log('[User Prompt 長度]:', generateInterpretationPrompt(fullReport).length, '字');
+  console.log('→ 接上 GPT-4 / Claude 就能生成個人化解讀報告！');
+
 } catch (err: any) {
-  console.log(`  ⚠️ 交叉驗證錯誤: ${err.message}`);
+  console.log(`  ⚠️ 錯誤: ${err.message}`);
 }
 
 console.log('\n\n' + '═'.repeat(60));
-console.log('🔮 Destiny Engine v0.1.0 — 命理引擎 Demo 完成');
-console.log('   GitHub: github.com/ctmaxs/destiny-engine');
-console.log('   「一個輸入，多個系統，AI 幫你讀懂自己」');
+console.log('🔮 造命 ZaoMing AI v0.2.0 — Demo 完成');
+console.log('   不認命，用 AI 逆天改命。');
+console.log('   GitHub: github.com/maxtsai01/destiny-engine');
 console.log('═'.repeat(60) + '\n');
