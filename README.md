@@ -6,7 +6,7 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue.svg)](https://www.typescriptlang.org/)
-[![Systems](https://img.shields.io/badge/Systems-15-orange.svg)]()
+[![Systems](https://img.shields.io/badge/Systems-40-orange.svg)]()
 
 ---
 
@@ -14,7 +14,7 @@
 
 **造命**（ZaoMing）是世界第一個**命理 × AI 人生策略引擎**。
 
-不只算命 — 15 個命理系統同時排盤、交叉驗證、AI 解讀，幫你**看懂天賦、找到資源、造出自己的命**。
+不只算命 — 40 個命理系統同時排盤、交叉驗證、AI 解讀，幫你**看懂天賦、找到資源、造出自己的命**。
 
 ```
 傳統算命：「你是XX命」→ 然後呢？
@@ -39,7 +39,7 @@
 | 🔗 多系統交叉驗證 | 三個系統都指向同一方向 = 可信度拉滿 |
 | ⚡ 道法術器 | 哲學 → 方法論 → 執行 → 工具，層層落地 |
 
-## 📦 15 個命理系統（全部已完成 ✅）
+## 📦 40 個命理系統（全部已完成 ✅）
 
 ### 命理系統
 
