@@ -1,7 +1,7 @@
 {
-  "name": "destiny-engine",
-  "version": "0.1.0",
-  "description": "🔮 命理 AI 引擎 — One input, multiple divination systems, AI-powered cross-system interpretation",
+  "name": "zaoming",
+  "version": "0.4.0",
+  "description": "🔮 造命 ZaoMing AI — 不認命，造命。Forge Your Destiny with AI-powered multi-system divination.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
