@@ -12,10 +12,12 @@ import { crossValidate } from './ai/cross-validation';
 import type { BirthInfo } from './core/types';
 
 // ====== 測試用例 ======
+// Allison 蔡寅衍 — 造命 AI 創辦人
 const testInput: BirthInfo = {
-  solarDate: '1990-08-07',
-  hour: 14,       // 下午2點 = 未時
+  solarDate: '1993-08-07',
+  hour: 9,        // 早上9:46 = 巳時
   gender: 'male',
+  name: '蔡寅衍',
 };
 
 console.log('🔮 Destiny Engine v0.1.0 — 命理 × AI 整合引擎');
