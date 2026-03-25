@@ -1,0 +1,42 @@
+{
+  "name": "destiny-engine",
+  "version": "0.1.0",
+  "description": "🔮 命理 AI 引擎 — One input, multiple divination systems, AI-powered cross-system interpretation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/demo.ts",
+    "test": "jest",
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "divination",
+    "fortune-telling",
+    "bazi",
+    "ziwei",
+    "astrology",
+    "iching",
+    "ai",
+    "chinese-metaphysics",
+    "命理",
+    "八字",
+    "紫微斗數",
+    "易經"
+  ],
+  "author": "CTMaxs <max@ctmaxs.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxtsai01/destiny-engine.git"
+  },
+  "dependencies": {
+    "iztro": "^2.4.0",
+    "lunar-javascript": "^1.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
