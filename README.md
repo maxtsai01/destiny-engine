@@ -1,8 +1,8 @@
-# 🔮 Destiny Engine — 命理 AI 引擎
+# 🔮 造命 ZaoMing AI — 不認命，用 AI 逆天改命
 
 <p align="center">
-  <strong>一個輸入，多個命理系統，AI 幫你讀懂自己</strong><br>
-  <em>One input. Multiple divination systems. AI-powered self-discovery.</em>
+  <strong>15 個命理系統 × AI 交叉驗證 × 成長導航 × AI 儀式</strong><br>
+  <em>Forge Your Destiny — 15 divination systems, AI cross-validation, growth navigation.</em>
 </p>
 
 <p align="center">
@@ -19,11 +19,13 @@
 
 🎯 **世界第一個** 多命理系統 × AI 交叉解讀的開源引擎
 
-🔄 **三系統同時排盤** — 八字 + 紫微斗數 + 西洋占星，一次搞定
+🔄 **15 系統同時排盤** — 八字、紫微、占星、姓名、靈數、易經、MBTI、奇門、人類圖、塔羅、數字易經、風水、六爻、彩虹人生、合盤
 
 🧠 **AI 交叉驗證** — 不是單系統猜測，是多系統共識。共鳴度算法量化可信度
 
-💡 **不算命，幫成長** — 每次解讀都以「你可以做什麼」收尾，不是「你命中注定」
+💡 **不算命，造命** — 不只告訴你命盤結果，還幫你找資源、定策略、規劃落地
+
+🔮 **AI 儀式引擎** — 造命宣言、每日聚運、月度復盤，把傳統儀式變成 AI 自動化
 
 🏗️ **統一 Schema** — 業界首創，所有命理系統輸出同一格式，開發者可自由組合
 
@@ -85,7 +87,7 @@ npx ts-node src/demo.ts
 | 人類圖 | 📋 Phase 3 | Week 5-6 |
 | 塔羅牌 | 📋 Phase 3 | Week 5-6 |
 
-**目標：22 個模組，涵蓋中西方命理 + 現代人格系統 + AI 整合**
+**已完成 15 個系統 + AI 儀式引擎 + CLI 工具，涵蓋中西方命理 + 現代人格系統 + AI 整合**
 
 ---
 
@@ -187,6 +189,6 @@ MIT — 自由使用，打造更好的東西。
 ---
 
 <p align="center">
-  <strong>Built with 🔮 by <a href="https://ctmaxs.com">CTMaxs</a></strong><br>
-  <em>命理 GPS — 不只告訴你在哪，還告訴你怎麼走</em>
+  <strong>造命 ZaoMing AI — Built by <a href="https://ctmaxs.com">CTMaxs</a></strong><br>
+  <em>不認命，用 AI 逆天改命。成為世人造命改命的源頭。</em>
 </p>
