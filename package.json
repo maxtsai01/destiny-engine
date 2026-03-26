@@ -1,7 +1,7 @@
 {
   "name": "zaoming",
-  "version": "0.4.0",
-  "description": "🔮 造命 ZaoMing AI — 不認命，造命。Forge Your Destiny with AI-powered multi-system divination.",
+  "version": "0.5.0",
+  "description": "🔮 造命 ZaoMing AI — 40 個命理系統 × 190+ 維度 × AI 交叉驗證。不認命，用 AI 逆天改命。",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
