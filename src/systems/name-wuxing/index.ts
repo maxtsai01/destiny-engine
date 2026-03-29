@@ -141,7 +141,7 @@ const CHAR_MEANING_WUXING: Record<string, { wuxing: string; reason: string }> = 
   '坊': { wuxing: '土', reason: '土旁' },
   '安': { wuxing: '土', reason: '安定如大地，女在宀下安穩' },
   '宇': { wuxing: '土', reason: '宇宙之宇，房屋覆蓋，土之象' },
-  '衍': { wuxing: '土', reason: '水行地上為衍，引申為繁衍，有土之承載義' },
+  '衍': { wuxing: '水', reason: '《說文》水朝宗於海也，水流漫延之象，本義屬水' },
   '穩': { wuxing: '土', reason: '穩重踏實，土之性' },
   '德': { wuxing: '土', reason: '厚德載物，土之德' },
   '信': { wuxing: '土', reason: '誠信，土之德（仁義禮智信對應木火土金水中信屬土）' },
