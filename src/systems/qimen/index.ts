@@ -1,5 +1,5 @@
 /**
- * 造命 ZaoMing — 奇門遁甲（正宗時家奇門·轉盤法）
+ * 造命 ZaoMing — 奇門遁甲（正宗時家奇門·飛盤式置閏法）
  * 
  * 理論源頭：
  * - 《奇門遁甲統宗》：明代整理的奇門經典
@@ -232,8 +232,21 @@ export function calculateQimen(input: BirthInfo): QimenResult {
   
   const yangDun = juConfig.yangDun;
   
-  // 用日期決定上中下元（簡化：每5天一元）
-  const yuan = day % 15 < 5 ? 'upper' : day % 15 < 10 ? 'middle' : 'lower';
+  // 置閏法定上中下元：距離前一節氣的天數，每 5 天一元
+  let diffDays = 0;
+  try {
+    const prevJQ = lunar.getPrevQi(); // 用「氣」（春分、穀雨等）
+    if (prevJQ && prevJQ.getSolar()) {
+      const jqSolar = prevJQ.getSolar();
+      diffDays = Math.floor(solar.getJulianDay() - Solar.fromYmd(
+        jqSolar.getYear(), jqSolar.getMonth(), jqSolar.getDay()
+      ).getJulianDay());
+    }
+  } catch {
+    // fallback
+    diffDays = (day - 1) % 15;
+  }
+  const yuan = diffDays < 5 ? 'upper' : diffDays < 10 ? 'middle' : 'lower';
   const juNumber = yuan === 'upper' ? juConfig.upperJu 
     : yuan === 'middle' ? juConfig.middleJu 
     : juConfig.lowerJu;
@@ -428,7 +441,7 @@ export function qimenToSystemAnalysis(input: BirthInfo): SystemAnalysis {
 
   return {
     system: 'qimen',
-    systemName: '奇門遁甲（正宗時家奇門·轉盤法）',
+    systemName: '奇門遁甲（正宗時家奇門·飛盤式置閏法）',
     rawData: r,
     traits,
     timing: [],

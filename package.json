@@ -31,12 +31,16 @@
     "url": "https://github.com/maxtsai01/destiny-engine.git"
   },
   "dependencies": {
+    "@line/bot-sdk": "^10.6.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
     "iztro": "^2.4.0",
     "lunar-javascript": "^1.6.0"
   },
   "devDependencies": {
-    "typescript": "^5.4.0",
+    "@types/express": "^5.0.6",
     "@types/node": "^20.0.0",
-    "ts-node": "^10.9.0"
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
   }
 }
